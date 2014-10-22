@@ -1,0 +1,24 @@
+create table customers (id int NOT NULL PRIMARY KEY,
+						last_name VARCHAR(30),
+						first_name VARCHAR(30),
+						email VARCHAR(80),
+						telephone_nbr VARCHAR(20),
+						called VARCHAR(8),
+							);
+
+create tables orders (order_id NOT NULL PRIMARY KEY,
+					  order_date VARCHAR(8),
+					  status VARCHAR(20),
+					  customer_id INT,
+					  email VARCHAR(80),
+					  address VARCHAR(80),
+					  city VARCHAR(50),
+					  state VARCHAR(40),
+					  postal_code VARCHAR(10),
+					  num_watermelons INT,
+					  num_other_melons INT,
+					  sub_total INT,
+					  tax INT,
+					  order_total INT,
+					  FOREIGN KEY id REFERENCES customers.id					  
+					  );
